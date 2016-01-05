@@ -34,7 +34,7 @@ module PoisePython
       #   python_virtualenv '/opt/myapp'
       class Resource < PoisePython::Resources::PythonRuntime::Resource
         include PoisePython::PythonCommandMixin
-        provides(:python_virtualenv)
+        provides(:poise_python_virtualenv)
         # Add create and delete actions as more semantically relevant aliases.
         default_action(:create)
         actions(:create, :delete)
@@ -90,7 +90,7 @@ module PoisePython
       # @provides python_virtualenv
       class Provider < PoisePython::PythonProviders::Base
         include PoisePython::PythonCommandMixin
-        provides(:python_virtualenv)
+        provides(:poise_python_virtualenv)
 
         # Alias our actions. Slightly annoying that they will show in
         # tracebacks with the original names, but oh well.
