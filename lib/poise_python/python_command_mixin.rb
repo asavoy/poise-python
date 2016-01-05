@@ -37,7 +37,7 @@ module PoisePython
         if name.is_a?(PoisePython::Resources::PythonVirtualenv::Resource)
           parent_python(name)
         else
-          parent_python("python_virtualenv[#{name}]")
+          parent_python("poise_python_virtualenv[#{name}]")
         end
       end
     end
